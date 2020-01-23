@@ -197,13 +197,13 @@ body {
     height: 550px;
 }
 
-.grid3 {
+.grid10 {
     padding: 10px;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.grid3 div {
+.grid10 div {
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -222,11 +222,11 @@ body {
 
 @media only screen and (max-width: 1440px) {
     .grid2 {grid-template-columns: 1fr 1fr;}
-    .grid3 {grid-template-columns: 1fr 1fr 1fr;}
+    .grid10 {grid-template-columns: 1fr 1fr 1fr;}
 }
 @media only screen and (max-width: 968px) {
     .grid2 {grid-template-columns: 1fr;}
-    .grid3 {grid-template-columns: 1fr 1fr;}
+    .grid10 {grid-template-columns: 1fr 1fr;}
 }
 
 footer {
