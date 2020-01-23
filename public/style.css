@@ -197,6 +197,18 @@ body {
     height: 550px;
 }
 
+.grid3 {
+    padding: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid3 div {
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
 #firstPic {background-image: url(images/Worst6.jpg);}
 #secondPic {background-image: url(images/Worst10.jpg);}
 #thirdPic {background-image: url(images/Worst7.jpg);}
@@ -204,11 +216,17 @@ body {
 #fifthPic {background-image: url(images/Worst2.jpg);}
 #sixthPic {background-image: url(images/Worst1.jpg);}
 
+#firstPic2 {background-image: url(images/UnknownMale.jpg);}
+#secondPic2 {background-image: url(images/UnknownFemale.jpg);}
+#thirdPic2 {background-image: url(images/UnknownFunny.jpg);}
+
 @media only screen and (max-width: 1440px) {
     .grid2 {grid-template-columns: 1fr 1fr;}
+    .grid3 {grid-template-columns: 1fr 1fr 1fr;}
 }
 @media only screen and (max-width: 968px) {
     .grid2 {grid-template-columns: 1fr;}
+    .grid3 {grid-template-columns: 1fr 1fr;}
 }
 
 footer {
