@@ -1,0 +1,289 @@
+html {
+    scroll-behavior: smooth;
+}
+ul{list-style: none;}
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    margin:0;
+    font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+}
+
+.navbar {
+    z-index: 99;
+    overflow: hidden;
+    background-color: #222;
+    opacity: 0.95;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+
+.navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 2.1vw;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.navbar a:hover, #slideMenu a:hover {
+    color: #BBB;
+    transition: 0.3s;
+}
+
+.navbar a img {
+    width: 16px;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+#slideMenu {
+    opacity: 0.95;
+    width: 100%;
+    position: fixed;
+    top: 48px;
+    bottom: 0;
+    display: none;
+    z-index: 98;
+}
+
+#slideMenu a {
+    display: block;
+    width: 80%;
+    margin: auto;
+    color: #f2f2f2;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#slideMenu hr {
+    width: 80%;
+    color: #333;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar a:not(.icons) {display: none;}
+    .navbar a.icons {
+      display: block;
+      font-size: 18px;
+    }
+    .navbar {
+        justify-content: space-between;
+    }
+    #slideMenu, .navbar {
+        background-color: #111;
+        opacity: 0.99;
+    }
+}
+
+@media screen and (min-width: 900px){
+    #slideMenu {
+        display: none !important;
+    }
+}
+
+#tellUsAboutYou input[type=text], select {
+    width: 350px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#tellUsAboutYou input[type=submit] {
+    width: 350px;
+    background-color: #2020FF;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#tellUsAboutYou input[type=submit]:hover {
+    background-color: #3030FF;
+}
+#tellUsAboutYou div {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.grid section {
+    padding-top: 50px;
+    background-color: rgb(248,248,248);
+    text-align: center;
+}
+
+.grid section h1 {
+    font-size: 40px;
+    position: relative;
+    top: 21px;
+}
+.grid section h1 span {
+    position: relative;
+    top: -5px;
+    left: -3px;
+    padding: 1px 4px;
+    font-size: 21px;
+    border: 3px solid black;
+    border-radius: 6px;
+}
+.series {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: red;
+    position: relative;
+    top: 4px;
+}
+
+.grid section p {
+    font-size: 21px;
+    padding-left: 25px;
+    padding-right: 25px;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 800px){
+    .grid section p {
+        font-size: 18px;
+        transition: 0.3s;
+    }
+}
+
+.grid section p a {color: rgb(0, 125, 167);}
+
+.grid section img {
+    max-height: 500px;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid2 {
+    padding: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid2 div {
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+}
+
+#firstPic {background-image: url(images/Worst6.jpg);}
+#secondPic {background-image: url(images/Worst10.jpg);}
+#thirdPic {background-image: url(images/Worst7.jpg);}
+#fourthPic {background-image: url(images/Worst9.jpg);}
+#fifthPic {background-image: url(images/Worst2.jpg);}
+#sixthPic {background-image: url(images/Worst1.jpg);}
+
+@media only screen and (max-width: 1440px) {
+    .grid2 {grid-template-columns: 1fr 1fr;}
+}
+@media only screen and (max-width: 968px) {
+    .grid2 {grid-template-columns: 1fr;}
+}
+
+footer {
+    background-color: #EEE;
+    padding: 20px;
+}
+
+footer div {
+    max-width: 940px;
+    margin: auto;
+}
+
+footer div p {
+    color: #999;
+    font-size: 13.5px;
+}
+
+footer div hr {color: #EEE;}
+
+.grid3 {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid3 section{
+    flex: 25%;
+    max-width: 25%;
+}
+
+.grid3 section h5 {
+    position: relative;
+    left: 39px;
+}
+
+.grid3 section ul li a, 
+.grid4 section ul li a {
+    color: #666;
+    font-size: 12px;
+}
+
+.grid3 section ul li a:hover,
+.grid4 section ul li a:hover {
+    color: #444;
+    text-decoration: underline;
+}
+
+.grid4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid4 section h5 {font-weight: 550;}
+.grid4 section h5 span {float: right;}
+
+.grid4 section .header{color: #444;}
+.grid4 section .header:hover{color: #222;}
+
+.grid4 section ul{display: none;}
+
+@media screen and (max-width: 900px){
+    .grid3 {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .grid4 {
+        display: none !important;
+    }
+}
+
+.finalNotes {
+    text-align: center;
+}
+
+
+
