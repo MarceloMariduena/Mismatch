@@ -1,7 +1,5 @@
-html {
-    scroll-behavior: smooth;
-}
-ul{list-style: none;}
+html {scroll-behavior: smooth;}
+
 a {
     outline: none;
     text-decoration: none;
@@ -12,7 +10,7 @@ body {
     font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
-.navbar {
+.topnav {
     z-index: 99;
     overflow: hidden;
     background-color: #222;
@@ -24,8 +22,7 @@ body {
     justify-items: center;
     justify-content: center;
 }
-
-.navbar a {
+.topnav a {
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -34,65 +31,60 @@ body {
     font-size: 15px;
     transition: 0.3s;
 }
-.navbar a:hover, #slideMenu a:hover {
+.topnav a:hover{
     color: #BBB;
     transition: 0.3s;
 }
-
-.navbar a img {
-    width: 16px;
+.topnav .icon {
+    display: none;
 }
-
-.navbar .icon {
+.topnav hr {
     display: none;
 }
 
-#slideMenu {
-    opacity: 0.95;
-    width: 100%;
-    position: fixed;
-    top: 48px;
-    bottom: 0;
-    display: none;
-    z-index: 98;
-}
-
-#slideMenu a {
-    display: block;
-    width: 80%;
-    margin: auto;
-    color: #f2f2f2;
-    padding: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-#slideMenu hr {
-    width: 80%;
-    color: #333;
-}
-
-@media screen and (max-width: 900px) {
-    .navbar a:not(.icons) {display: none;}
-    .navbar a.icons {
-      display: block;
-      font-size: 18px;
-    }
-    .navbar {
+@media screen and (max-width: 900px){
+    .topnav {
         justify-content: space-between;
-    }
-    #slideMenu, .navbar {
-        background-color: #111;
+        background-color:#111;
         opacity: 0.99;
     }
-}
+    .topnav a {
+        display: none;
+    }
+    .topnav .icon{
+        display: block;
+        font-size: 18px;
+    }
 
-@media screen and (min-width: 900px){
-    #slideMenu {
-        display: none !important;
+    /* when 'bars' icon is pressed */
+    .topnav .responsive {
+        opacity: 0.95;
+        width: 100%;
+        position: fixed;
+        top: 48px;
+        bottom: 0;
+        z-index: 98;
+    }
+    .topnav .responsive a {
+        display: block;
+        width: 80%;
+        margin: auto;
+        color: #f2f2f2;
+        padding: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .topnav .responsive hr {
+        display: block;
+        width: 80%;
+        color: #333;
+    }
+    .topnav .resonsive .icon {
+        display: block;
     }
 }
+
 
 #tellUsAboutYou input[type=text], select {
     width: 350px;
@@ -232,6 +224,10 @@ body {
 footer {
     background-color: #EEE;
     padding: 20px;
+}
+
+footer ul{
+    list-style-type: none;
 }
 
 footer div {
