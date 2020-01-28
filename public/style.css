@@ -83,21 +83,21 @@ body {
 
 
 /**------------------- GRID WRAPPER -------------------**/
-.grid {
+.wrapper {
     display: grid;
     grid-gap: 10px;
 }
-.grid section {
+.wrapper section {
     padding: 50px 0px 20px 0;
     background-color: rgb(248,248,248);
     text-align: center;
 }
-.grid section h1 {
+.wrapper section h1 {
     font-size: 40px;
     position: relative;
     top: 21px;
 }
-.grid section p {
+.wrapper section p {
     font-size: 21px;
     padding-left: 25px;
     padding-right: 25px;
@@ -109,16 +109,7 @@ body {
         transition: 0.3s;
     }
 }
-.grid section p a {color: rgb(0, 125, 167);}
-/*
-.grid section img {
-    max-height: 500px;
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-*/
+.wrapper section p a {color: rgb(0, 125, 167);}
 
 
 /**------------------- SECTION 1: USER INFO -------------------**/
@@ -157,53 +148,60 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+@media screen and (max-width: 600px){
+    .buttongrid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 .togglebtn {
     width: 200px;
-    background-color: lightgrey;
+    background-color: #DDDDDD;
     color: #333333;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: 1s;
+}
+.togglebtn:hover {
+    background-color: #AAAAAA;
+    color: #111111;
+}
+.togglebtnpressed {
+    background-color: #333333;
+    color: #AAAAAA;
 }
 
 
 /**------------------- SECTION 3: MATCHES -------------------**/
-
+#firstPic2 {background-image: url(images/UnknownMale.jpg);}
+#secondPic2 {background-image: url(images/UnknownFemale.jpg);}
+#thirdPic2 {background-image: url(images/UnknownFunny.jpg);}
 
 
 /**------------------- SECTION 4: SUCCESS STORIES -------------------**/
-
-
-
-/**------------------- FOOTER -------------------**/
-
-.grid2 {
+.successgrid {
     padding: 10px;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
-.grid2 div {
-    background-size: cover;
-    background-position: center;
-    height: 550px;
-}
-
-.grid3 {
-    padding: 10px;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.grid3 div {
+.successgrid div {
     background-size: cover;
     background-position: center;
     height: 500px;
 }
-
+@media screen and (max-width: 1080px){
+    .successgrid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 698px){
+    .successgrid{
+        grid-template-columns: 1fr;
+    }
+}
 #firstPic {background-image: url(images/Worst6.jpg);}
 #secondPic {background-image: url(images/Worst10.jpg);}
 #thirdPic {background-image: url(images/Worst7.jpg);}
@@ -211,96 +209,72 @@ body {
 #fifthPic {background-image: url(images/Worst2.jpg);}
 #sixthPic {background-image: url(images/Worst1.jpg);}
 
-#firstPic2 {background-image: url(images/UnknownMale.jpg);}
-#secondPic2 {background-image: url(images/UnknownFemale.jpg);}
-#thirdPic2 {background-image: url(images/UnknownFunny.jpg);}
 
-@media only screen and (max-width: 1440px) {
-    .grid2 {grid-template-columns: 1fr 1fr;}
-    .grid3 {grid-template-columns: 1fr 1fr 1fr;}
-}
-@media only screen and (max-width: 968px) {
-    .grid2 {grid-template-columns: 1fr;}
-    .grid3 {grid-template-columns: 1fr 1fr;}
-}
-
+/**------------------- FOOTER -------------------**/
 footer {
     background-color: #EEE;
     padding: 20px;
 }
-
 footer ul{
     list-style-type: none;
 }
-
 footer div {
     max-width: 940px;
     margin: auto;
 }
-
 footer div p {
     color: #999;
     font-size: 13.5px;
 }
-
 footer div hr {color: #EEE;}
-
-.grid3 {
+.footergrid{
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
 }
-
-.grid3 section{
+.footergrid section {
     flex: 25%;
     max-width: 25%;
 }
-
-.grid3 section h5 {
+.footergrid section h5 {
     position: relative;
     left: 39px;
 }
-
-.grid3 section ul li a, 
-.grid4 section ul li a {
-    color: #666;
-    font-size: 12px;
+@media only screen and (max-width: 1440px) {
+    .footergrid {grid-template-columns: 1fr 1fr 1fr;}
 }
-
-.grid3 section ul li a:hover,
-.grid4 section ul li a:hover {
-    color: #444;
-    text-decoration: underline;
+@media only screen and (max-width: 968px) {
+    .footergrid {grid-template-columns: 1fr 1fr;}
 }
-
-.grid4 {
-    display: flex;
-    flex-direction: column;
-}
-
-.grid4 section h5 {font-weight: 550;}
-.grid4 section h5 span {float: right;}
-
-.grid4 section .header{color: #444;}
-.grid4 section .header:hover{color: #222;}
-
-.grid4 section ul{display: none;}
-
 @media screen and (max-width: 900px){
-    .grid3 {
-        display: none !important;
+    .footergrid {
+        display: flex;
+        flex-direction: column;
+    }
+    .footergrid section h5 {
+        font-weight: 550;
+    }
+    .footergrid section h5 span {
+        float: right;
+    }
+    .footergrid section .header{
+        color: #444;
+    }
+    .footergrid section .header:hover{
+        color: #222;
+    }
+    .footergrid section ul {
+        display: none;
+    }
+    .footergrid section ul li a {
+        color: #666;
+        font-size: 12px;
+    }
+    .footergrid section ul li a:hover {
+        color: #444;
+        text-decoration: underline;
     }
 }
-
-@media screen and (min-width: 900px){
-    .grid4 {
-        display: none !important;
-    }
-}
-
 .finalNotes {
     text-align: center;
 }
-
-
-
