@@ -1,15 +1,16 @@
+/** -------- UNIVERSALS ----------- **/
 html {scroll-behavior: smooth;}
-
 a {
     outline: none;
     text-decoration: none;
 }
-
 body {
     margin:0;
     font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
+
+/** --------- NAVIGATION BAR ----------- **/
 .topnav {
     z-index: 99;
     overflow: hidden;
@@ -41,7 +42,6 @@ body {
 .topnav hr {
     display: none;
 }
-
 @media screen and (max-width: 900px){
     .topnav {
         justify-content: space-between;
@@ -55,81 +55,43 @@ body {
         display: block;
         font-size: 18px;
     }
-
-    /* when 'bars' icon is pressed */
-    .topnav .responsive {
+    /* when 'bars' icon is pressed: a javascript function will insert this function in the topnav */
+    .responsive {
+        display: block;
         opacity: 0.95;
         width: 100%;
         position: fixed;
-        top: 48px;
         bottom: 0;
-        z-index: 98;
     }
-    .topnav .responsive a {
+    .responsive a {
         display: block;
-        width: 80%;
-        margin: auto;
         color: #f2f2f2;
         padding: 5px;
         text-decoration: none;
         font-size: 16px;
         transition: 0.3s;
     }
-    .topnav .responsive hr {
+    .responsive hr {
         display: block;
         width: 80%;
         color: #333;
     }
-    .topnav .resonsive .icon {
+    .responsive .icon {
         display: block;
     }
 }
 
 
-#tellUsAboutYou input[type=text], select {
-    width: 350px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-#tellUsAboutYou input[type=submit] {
-    width: 350px;
-    background-color: #2020FF;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-#tellUsAboutYou input[type=submit]:hover {
-    background-color: #3030FF;
-}
-#tellUsAboutYou div {
-    border-radius: 5px;
-    padding: 20px;
-}
-
-
-
-
-
-
-
+/** ----------- GRID WRAPPER ---------- **/
 .grid {
     display: grid;
     grid-gap: 10px;
 }
-
 .grid section {
     padding-top: 50px;
     background-color: rgb(248,248,248);
     text-align: center;
 }
-
 .grid section h1 {
     font-size: 40px;
     position: relative;
@@ -175,6 +137,41 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+
+
+#tellUsAboutYou input[type=text], select {
+    width: 350px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#tellUsAboutYou input[type=submit] {
+    width: 350px;
+    background-color: #2020FF;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#tellUsAboutYou input[type=submit]:hover {
+    background-color: #3030FF;
+}
+#tellUsAboutYou div {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+
+
+
 
 .grid2 {
     padding: 10px;

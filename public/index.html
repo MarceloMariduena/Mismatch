@@ -9,13 +9,12 @@
   <title>Mismatch</title>
 </head>
 
-<!-- NAMING CONVENTIONS
-  classes are 'lowercase'
-  id's are in 'camelCase'
--->
+<!------------------- NAMING CONVENTIONS ------------------->
+<!-- classes are 'lowercase' -->
+<!-- id's are in 'camelCase' -->
 <body>
 
-<!-- Navigation bar -->
+<!------------------- NAVIGATION BAR ------------------->
 <nav class="topnav" id="topNav">
   <a href="javascript:void(0);" class="icon" onclick="toggleSwitch()">
     <i class="fa fa-bars"></i>
@@ -25,57 +24,58 @@
   <a href="#oppositeDoAttract">Opposites Do Attract</a>
 </nav>
 
-<!-- Grid of photos -->
+<!------------------- GRID WRAPPER ------------------->
 <div class="grid">
+  <!------------------- SECTION 1: SELF-FILLABLE USER INFO ------------------->
   <section id="tellUsAboutYou">
     <h1>Tell Us About You</h1>
-    <div>
-        <form action="/action_page.php">
-            <label for="lname">Age</label><br/>
-            <input type="text" id="lname" name="lastname" placeholder="How old are you?"><br/>
+    <form action="/action_page.php">
+      <label for="lname">Age</label><br/>
+      <input type="text" id="lname" name="lastname" placeholder="How old are you?"><br/>
+      <label for="fname">Height</label><br/>
+      <input type="text" id="fname" name="firstname" placeholder="What is your height in cm?"><br/>
+      <label for="lname">Weight</label><br/>
+      <input type="text" id="lname" name="lastname" placeholder="How much do you weigh?"><br/>
+      <label for="country">Country</label><br/>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select><br/>
+      <input type="submit" value="Submit">
+    </form>
+  </section> <!------------------- END OF SECTION 1 ------------------->
+  <!------------------- SECTION 2: BUTTONS WITH USER CHARACTERISTICS ------------------->
 
-            <label for="fname">Height</label><br/>
-            <input type="text" id="fname" name="firstname" placeholder="What is your height in cm?"><br/>
-        
-            <label for="lname">Weight</label><br/>
-            <input type="text" id="lname" name="lastname" placeholder="How much do you weigh?"><br/>
-        
-            <label for="country">Country</label><br/>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-            </select><br/>
 
-          <input type="submit" value="Submit">
-        </form>
-      </div>
-  </section>
+
+  <!------------------- SECTION 3: MATCHES ------------------->
   <section id="findYourWorstNightmare">
     <h1>Find Your Worst Nightmare</h1>
     <p>Here are your mismatches: </p>
     <div class="grid3">
-        <div id="firstPic2"></div>
-        <div id="secondPic2"></div>
-        <div id="thirdPic2"></div>
-      </div>
-  </section>
+      <div id="firstPic2"></div>
+      <div id="secondPic2"></div>
+      <div id="thirdPic2"></div>
+    </div>
+  </section> <!------------------- END OF SECTION 3 ------------------->
+  <!------------------- SECTION 4: SUCCESS STORIES ------------------->
   <section>
     <h1>Opposite Do Attract</h1>
     <p> Success stories: </p>
 
-  </section>
-</div>
+    <div class="grid2">
+      <div id="firstPic"></div>
+      <div id="secondPic"></div>
+      <div id="thirdPic"></div>
+      <div id="fourthPic"></div>
+      <div id="fifthPic"></div>
+      <div id="sixthPic"></div>
+    </div>
+  </section> <!------------------- END OF SECTION 4 ------------------->
+</div> <!------------------- END OF GRID WRAPPER ------------------->
 
-<section class="grid2">
-  <div id="firstPic"></div>
-  <div id="secondPic"></div>
-  <div id="thirdPic"></div>
-  <div id="fourthPic"></div>
-  <div id="fifthPic"></div>
-  <div id="sixthPic"></div>
-</section>
-
+<!------------------- FOOTER ------------------->
 <footer>
   <div>
     <p>We are not responsible for the outcomes of your dates, unless they go unexpectedly well. In the case they go surprisingly well, feel free to <a href="#">donate here</a>.
@@ -184,7 +184,7 @@
       <p>This project was coded by <a href="https://github.com/marcelomariduena" target="_blank">Marcelo Mariduena</a></p>
     </div>
   </div>
-</footer>
+</footer> <!------------------- END OF FOOTER ------------------->
 
 <script src="main.js"></script>
 </body>
