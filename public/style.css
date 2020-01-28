@@ -1,4 +1,4 @@
-/** -------- UNIVERSALS ----------- **/
+/**------------------- UNIVERSALS -------------------**/
 html {scroll-behavior: smooth;}
 a {
     outline: none;
@@ -10,7 +10,7 @@ body {
 }
 
 
-/** --------- NAVIGATION BAR ----------- **/
+/**------------------- NAVIGATION BAR -------------------**/
 .topnav {
     z-index: 99;
     overflow: hidden;
@@ -82,13 +82,13 @@ body {
 }
 
 
-/** ----------- GRID WRAPPER ---------- **/
+/**------------------- GRID WRAPPER -------------------**/
 .grid {
     display: grid;
     grid-gap: 10px;
 }
 .grid section {
-    padding-top: 50px;
+    padding: 50px 0px 20px 0;
     background-color: rgb(248,248,248);
     text-align: center;
 }
@@ -97,39 +97,20 @@ body {
     position: relative;
     top: 21px;
 }
-.grid section h1 span {
-    position: relative;
-    top: -5px;
-    left: -3px;
-    padding: 1px 4px;
-    font-size: 21px;
-    border: 3px solid black;
-    border-radius: 6px;
-}
-.series {
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: red;
-    position: relative;
-    top: 4px;
-}
-
 .grid section p {
     font-size: 21px;
     padding-left: 25px;
     padding-right: 25px;
     transition: 0.3s;
 }
-
 @media screen and (max-width: 800px){
     .grid section p {
         font-size: 18px;
         transition: 0.3s;
     }
 }
-
 .grid section p a {color: rgb(0, 125, 167);}
-
+/*
 .grid section img {
     max-height: 500px;
     max-width: 100%;
@@ -137,10 +118,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+*/
 
 
-
-
+/**------------------- SECTION 1: USER INFO -------------------**/
 #tellUsAboutYou input[type=text], select {
     width: 350px;
     padding: 12px 20px;
@@ -163,15 +144,21 @@ body {
 #tellUsAboutYou input[type=submit]:hover {
     background-color: #3030FF;
 }
-#tellUsAboutYou div {
-    border-radius: 5px;
-    padding: 20px;
-}
+
+
+/**------------------- SECTION 2: BUTTONS WITH USER CHARACTERISTICS -------------------**/
 
 
 
+/**------------------- SECTION 3: MATCHES -------------------**/
 
 
+
+/**------------------- SECTION 4: SUCCESS STORIES -------------------**/
+
+
+
+/**------------------- FOOTER -------------------**/
 
 .grid2 {
     padding: 10px;
