@@ -1,18 +1,17 @@
-html {
-    scroll-behavior: smooth;
-}
-ul{list-style: none;}
+/**------------------- UNIVERSALS -------------------**/
+html {scroll-behavior: smooth;}
 a {
     outline: none;
     text-decoration: none;
 }
-
 body {
     margin:0;
     font-family: 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
-.navbar {
+
+/**------------------- NAVIGATION BAR -------------------**/
+.topnav {
     z-index: 99;
     overflow: hidden;
     background-color: #222;
@@ -24,8 +23,7 @@ body {
     justify-items: center;
     justify-content: center;
 }
-
-.navbar a {
+.topnav a {
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -34,66 +32,96 @@ body {
     font-size: 15px;
     transition: 0.3s;
 }
-.navbar a:hover, #slideMenu a:hover {
+.topnav a:hover{
     color: #BBB;
     transition: 0.3s;
 }
-
-.navbar a img {
-    width: 16px;
-}
-
-.navbar .icon {
+.topnav .icon {
     display: none;
 }
-
-#slideMenu {
-    opacity: 0.95;
-    width: 100%;
-    position: fixed;
-    top: 48px;
-    bottom: 0;
+.topnav hr {
     display: none;
-    z-index: 98;
 }
-
-#slideMenu a {
-    display: block;
-    width: 80%;
-    margin: auto;
-    color: #f2f2f2;
-    padding: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-#slideMenu hr {
-    width: 80%;
-    color: #333;
-}
-
-@media screen and (max-width: 900px) {
-    .navbar a:not(.icons) {display: none;}
-    .navbar a.icons {
-      display: block;
-      font-size: 18px;
-    }
-    .navbar {
+@media screen and (max-width: 900px){
+    .topnav {
         justify-content: space-between;
-    }
-    #slideMenu, .navbar {
-        background-color: #111;
+        background-color:#111;
         opacity: 0.99;
     }
-}
-
-@media screen and (min-width: 900px){
-    #slideMenu {
-        display: none !important;
+    .topnav a {
+        display: none;
+    }
+    .topnav .icon{
+        display: block;
+        font-size: 18px;
+    }
+    /* when 'bars' icon is pressed: a javascript function will insert this function in the topnav */
+    .responsive {
+        display: block;
+        opacity: 0.95;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+    .responsive a {
+        display: block;
+        color: #f2f2f2;
+        padding: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .responsive hr {
+        display: block;
+        width: 80%;
+        color: #333;
+    }
+    .responsive .icon {
+        display: block;
     }
 }
 
+
+/**------------------- GRID WRAPPER -------------------**/
+.grid {
+    display: grid;
+    grid-gap: 10px;
+}
+.grid section {
+    padding: 50px 0px 20px 0;
+    background-color: rgb(248,248,248);
+    text-align: center;
+}
+.grid section h1 {
+    font-size: 40px;
+    position: relative;
+    top: 21px;
+}
+.grid section p {
+    font-size: 21px;
+    padding-left: 25px;
+    padding-right: 25px;
+    transition: 0.3s;
+}
+@media screen and (max-width: 800px){
+    .grid section p {
+        font-size: 18px;
+        transition: 0.3s;
+    }
+}
+.grid section p a {color: rgb(0, 125, 167);}
+/*
+.grid section img {
+    max-height: 500px;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
+
+
+/**------------------- SECTION 1: USER INFO -------------------**/
 #tellUsAboutYou input[type=text], select {
     width: 350px;
     padding: 12px 20px;
@@ -116,73 +144,21 @@ body {
 #tellUsAboutYou input[type=submit]:hover {
     background-color: #3030FF;
 }
-#tellUsAboutYou div {
-    border-radius: 5px;
-    padding: 20px;
-}
+
+
+/**------------------- SECTION 2: BUTTONS WITH USER CHARACTERISTICS -------------------**/
 
 
 
+/**------------------- SECTION 3: MATCHES -------------------**/
 
 
 
+/**------------------- SECTION 4: SUCCESS STORIES -------------------**/
 
-.grid {
-    display: grid;
-    grid-gap: 10px;
-}
 
-.grid section {
-    padding-top: 50px;
-    background-color: rgb(248,248,248);
-    text-align: center;
-}
 
-.grid section h1 {
-    font-size: 40px;
-    position: relative;
-    top: 21px;
-}
-.grid section h1 span {
-    position: relative;
-    top: -5px;
-    left: -3px;
-    padding: 1px 4px;
-    font-size: 21px;
-    border: 3px solid black;
-    border-radius: 6px;
-}
-.series {
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: red;
-    position: relative;
-    top: 4px;
-}
-
-.grid section p {
-    font-size: 21px;
-    padding-left: 25px;
-    padding-right: 25px;
-    transition: 0.3s;
-}
-
-@media screen and (max-width: 800px){
-    .grid section p {
-        font-size: 18px;
-        transition: 0.3s;
-    }
-}
-
-.grid section p a {color: rgb(0, 125, 167);}
-
-.grid section img {
-    max-height: 500px;
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+/**------------------- FOOTER -------------------**/
 
 .grid2 {
     padding: 10px;
@@ -197,13 +173,13 @@ body {
     height: 550px;
 }
 
-.grid10 {
+.grid3 {
     padding: 10px;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.grid10 div {
+.grid3 div {
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -222,16 +198,20 @@ body {
 
 @media only screen and (max-width: 1440px) {
     .grid2 {grid-template-columns: 1fr 1fr;}
-    .grid10 {grid-template-columns: 1fr 1fr 1fr;}
+    .grid3 {grid-template-columns: 1fr 1fr 1fr;}
 }
 @media only screen and (max-width: 968px) {
     .grid2 {grid-template-columns: 1fr;}
-    .grid10 {grid-template-columns: 1fr 1fr;}
+    .grid3 {grid-template-columns: 1fr 1fr;}
 }
 
 footer {
     background-color: #EEE;
     padding: 20px;
+}
+
+footer ul{
+    list-style-type: none;
 }
 
 footer div {

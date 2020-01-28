@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link href="style.css" rel="stylesheet" type="text/css">
-<title>Mismatch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font-awesome icons -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- CSS -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <title>Mismatch</title>
 </head>
 
+<!------------------- NAMING CONVENTIONS ------------------->
+<!-- classes are 'lowercase' -->
+<!-- id's are in 'camelCase' -->
 <body>
 
-<nav class="navbar" id="navbar">
-  <a id="bars" class="icon icons">
+<!------------------- NAVIGATION BAR ------------------->
+<nav class="topnav" id="topNav">
+  <a href="javascript:void(0);" class="icon" onclick="toggleSwitch()">
     <i class="fa fa-bars"></i>
   </a>
   <a href="#tellUsAboutYou"> <i class="fa fa-heart-broken"></i> Tell Us About You</a>
@@ -18,65 +24,57 @@
   <a href="#oppositeDoAttract">Opposites Do Attract</a>
 </nav>
 
-<nav id="slideMenu">
-  <a href="#" onclick="return false;">Mismatch.com</a><hr/>
-  <a href="#tellUsAboutYou" onclick="return false;">Tell Us About You</a><hr/>
-  <a href="#findYourWorstNightmare" onclick="return false;">Find Your Worst Nightmare</a><hr/>
-  <a href="#OppositeDoAttract">Opposite Do Attract</a><hr/>
-</nav>
-
+<!------------------- GRID WRAPPER ------------------->
 <div class="grid">
+  <!------------------- SECTION 1: SELF-FILLABLE USER INFO ------------------->
   <section id="tellUsAboutYou">
     <h1>Tell Us About You</h1>
-    <div>
-        <form action="/action_page.php">
-            <label for="lname">Age</label><br/>
-            <input type="text" id="lname" name="lastname" placeholder="How old are you?"><br/>
-
-            <label for="fname">Height</label><br/>
-            <input type="text" id="fname" name="firstname" placeholder="What is your height in cm?"><br/>
-        
-            <label for="lname">Weight</label><br/>
-            <input type="text" id="lname" name="lastname" placeholder="How much do you weigh?"><br/>
-        
-            <label for="country">Country</label><br/>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-            </select><br/>
-
-          <input type="submit" value="Submit">
-        </form>
-      </div>
+    <form action="/action_page.php">
+      <label for="lname">Age</label><br/>
+      <input type="text" id="lname" name="lastname" placeholder="How old are you?"><br/>
+      <label for="fname">Height</label><br/>
+      <input type="text" id="fname" name="firstname" placeholder="What is your height in cm?"><br/>
+      <label for="lname">Weight</label><br/>
+      <input type="text" id="lname" name="lastname" placeholder="How much do you weigh?"><br/>
+      <label for="country">Country</label><br/>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select><br/>
+      <input type="submit" value="Submit">
+    </form>
+  </section> <!------------------- END OF SECTION 1 ------------------->
+  <!------------------- SECTION 2: BUTTONS WITH USER CHARACTERISTICS ------------------->
+  <section id="userCharacteristicsToggleButtons">
+    <h1>What Are You Like?</h1>
   </section>
-
+  <!------------------- SECTION 3: MATCHES ------------------->
   <section id="findYourWorstNightmare">
     <h1>Find Your Worst Nightmare</h1>
     <p>Here are your mismatches: </p>
-    <div class="grid10">
-        <div id="firstPic2"></div>
-        <div id="secondPic2"></div>
-        <div id="thirdPic2"></div>
-      </div>
-  </section>
-
-  <section>
+    <div class="grid3">
+      <div id="firstPic2"></div>
+      <div id="secondPic2"></div>
+      <div id="thirdPic2"></div>
+    </div>
+  </section> <!------------------- END OF SECTION 3 ------------------->
+  <!------------------- SECTION 4: SUCCESS STORIES ------------------->
+  <section id="successStories">
     <h1>Opposite Do Attract</h1>
     <p> Success stories: </p>
+    <div class="grid2">
+      <div id="firstPic"></div>
+      <div id="secondPic"></div>
+      <div id="thirdPic"></div>
+      <div id="fourthPic"></div>
+      <div id="fifthPic"></div>
+      <div id="sixthPic"></div>
+    </div>
+  </section> <!------------------- END OF SECTION 4 ------------------->
+</div> <!------------------- END OF GRID WRAPPER ------------------->
 
-  </section>
-</div>
-
-<section class="grid2">
-  <div id="firstPic"></div>
-  <div id="secondPic"></div>
-  <div id="thirdPic"></div>
-  <div id="fourthPic"></div>
-  <div id="fifthPic"></div>
-  <div id="sixthPic"></div>
-</section>
-
+<!------------------- FOOTER ------------------->
 <footer>
   <div>
     <p>We are not responsible for the outcomes of your dates, unless they go unexpectedly well. In the case they go surprisingly well, feel free to <a href="#">donate here</a>.
@@ -185,7 +183,8 @@
       <p>This project was coded by <a href="https://github.com/marcelomariduena" target="_blank">Marcelo Mariduena</a></p>
     </div>
   </div>
-</footer>
+</footer> <!------------------- END OF FOOTER ------------------->
 
+<script src="main.js"></script>
 </body>
 </html>
