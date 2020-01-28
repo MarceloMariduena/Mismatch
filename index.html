@@ -19,16 +19,18 @@
   <a href="javascript:void(0);" class="icon" onclick="toggleSwitch()">
     <i class="fa fa-bars"></i>
   </a>
-  <a href="#tellUsAboutYou"> <i class="fa fa-heart-broken"></i> Tell Us About You</a>
-  <a href="#findYourWorstNightmare">Find Your Worst Nightmare</a>
-  <a href="#oppositeDoAttract">Opposites Do Attract</a>
+  <a href="#userInfo"> Tell Us About You</a>
+  <a href="#userCharacteristics"> What are you like?</a>
+  <a href="#worstNightmare">Find Your Worst Nightmare</a>
+  <a href="#oppositesAttract">Opposites Do Attract</a>
 </nav>
 
 <!------------------- GRID WRAPPER ------------------->
 <div class="grid">
   <!------------------- SECTION 1: SELF-FILLABLE USER INFO ------------------->
-  <section id="tellUsAboutYou">
+  <section id="userInfo">
     <h1>Tell Us About You</h1>
+    <p> Enter your personal information bellow: </p>
     <form action="/action_page.php">
       <label for="lname">Age</label><br/>
       <input type="text" id="lname" name="lastname" placeholder="How old are you?"><br/>
@@ -46,11 +48,27 @@
     </form>
   </section> <!------------------- END OF SECTION 1 ------------------->
   <!------------------- SECTION 2: BUTTONS WITH USER CHARACTERISTICS ------------------->
-  <section id="userCharacteristicsToggleButtons">
+  <section id="userCharacteristics">
     <h1>What Are You Like?</h1>
+    <p> Tap on the things you are into: </p>
+    <div class="buttongrid">
+      <button class="togglebtn">Vegan</button>
+      <button class="togglebtn">Dog lover</button>
+      <button class="togglebtn">Cat lover</button>
+      <button class="togglebtn">Masochist</button>
+      <button class="togglebtn">Into BDSM</button>
+      <button class="togglebtn">Strong</button>
+      <button class="togglebtn">Athletic</button>
+      <button class="togglebtn">Couch potato</button>
+      <button class="togglebtn">Geeky</button>
+      <button class="togglebtn">Cuddler</button>
+      <button class="togglebtn">Stoic</button>
+      <button class="togglebtn">Wear fitted clothing</button>
+      <button class="togglebtn">Always relaxed</button>
+    </div>
   </section>
   <!------------------- SECTION 3: MATCHES ------------------->
-  <section id="findYourWorstNightmare">
+  <section id="worstNightmare">
     <h1>Find Your Worst Nightmare</h1>
     <p>Here are your mismatches: </p>
     <div class="grid3">
@@ -60,7 +78,7 @@
     </div>
   </section> <!------------------- END OF SECTION 3 ------------------->
   <!------------------- SECTION 4: SUCCESS STORIES ------------------->
-  <section id="successStories">
+  <section id="oppositesAttract">
     <h1>Opposite Do Attract</h1>
     <p> Success stories: </p>
     <div class="grid2">
