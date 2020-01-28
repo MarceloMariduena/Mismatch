@@ -122,7 +122,7 @@ body {
 
 
 /**------------------- SECTION 1: USER INFO -------------------**/
-#tellUsAboutYou input[type=text], select {
+#userInfo input[type=text], select {
     width: 350px;
     padding: 12px 20px;
     margin: 8px 0;
@@ -131,7 +131,7 @@ body {
     border-radius: 4px;
     box-sizing: border-box;
 }
-#tellUsAboutYou input[type=submit] {
+#userInfo input[type=submit] {
     width: 350px;
     background-color: #2020FF;
     color: white;
@@ -141,13 +141,31 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-#tellUsAboutYou input[type=submit]:hover {
+#userInfo input[type=submit]:hover {
     background-color: #3030FF;
 }
 
 
 /**------------------- SECTION 2: BUTTONS WITH USER CHARACTERISTICS -------------------**/
-
+.buttongrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media screen and (max-width: 900px){
+    .buttongrid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+.togglebtn {
+    width: 200px;
+    background-color: lightgrey;
+    color: #333333;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
 
 /**------------------- SECTION 3: MATCHES -------------------**/
